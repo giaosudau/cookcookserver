@@ -1,0 +1,7 @@
+{
+  "mongodb_url": "mongodb://127.0.0.1/serverjs",
+  "mongodb_url_app_frog": "mongodb://giaosudau:4b90a550ad95e45e5d385a264f2c8540@dharma.mongohq.com:10096/dicho_giaosudau",
+  "mongodb_url_deploy": "mongodb://nodejitsu:60f84bb7d4de9c62813f3a47d04fbc22@linus.mongohq.com:10042/nodejitsudb1240363116",
+  
+  "logger": { "format": "dev" }
+}
