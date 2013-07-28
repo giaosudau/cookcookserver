@@ -187,3 +187,199 @@ http://dicho2.aws.af.cm/dishes/get
     "comments": [],
     "created_at": "2013-07-28T08:44:57.172Z"
 }
+4. Get Home
+ {"name":"user1", "device":"nexus4",
+ "_id": "51f3b249d987e4933f000001",
+ "token":"cc1c25810aad74e63cc7e3ea313d4f93799087d0fb94f77472eb62cc12cb356c53246eea86d9d293b48625f41b4a34ea"
+ }
+ /home/get
+
+
+{
+"info":"success",
+"dishes":[
+{
+"main_picture":"1",
+"description":"Thit Chuot Luoc",
+"body":"Thit Chuot Luoc",
+"title":"Thit Chuot Luoc",
+"created_by":"51f4d824eb3b39237f000001",
+"_id":"51f54b6f2bb04e4b7a00001f",
+"__v":0,
+"steps":[
+"Thit Chuot Luoc",
+"CCCCCCCCCCCxc",
+"cxxxd"
+],
+"categories":[
+"51f54b6f2bb04e4b7a000023",
+"51f54b6f2bb04e4b7a000024"
+],
+"ingredients":[
+"51f54b6f2bb04e4b7a000020",
+"51f54b6f2bb04e4b7a000021",
+"51f54b6f2bb04e4b7a000022"
+],
+"likes":[
+],
+"picture":[
+"12xxxxx33332333",
+"222xxxxxx22",
+"3xxxxxx3333"
+],
+"comments":[
+],
+"created_at":"2013-07-28T16:48:47.677Z"
+},
+{
+"main_picture":"1",
+"description":"Thit Ga Luoc",
+"body":"Thit Ga Luoc",
+"title":"Thit Ga Luoc",
+"created_by":"51f4d824eb3b39237f000001",
+"_id":"51f54b512bb04e4b7a000019",
+"__v":0,
+"steps":[
+"Thit Ga Luoc",
+"CCCCCCCCCCCxc",
+"cxxxd"
+],
+"categories":[
+"51f54b512bb04e4b7a00001d",
+"51f54b512bb04e4b7a00001e"
+],
+"ingredients":[
+"51f54b512bb04e4b7a00001a",
+"51f54b512bb04e4b7a00001b",
+"51f54b512bb04e4b7a00001c"
+],
+"likes":[
+],
+"picture":[
+"12xxxxx33332333",
+"222xxxxxx22",
+"3xxxxxx3333"
+],
+"comments":[
+],
+"created_at":"2013-07-28T16:48:17.841Z"
+}
+]
+}
+
+
+
+5. Get More Home
+
+{  "name":"test_user1", "device":"nexus4",
+ "token":"869a9cd28e44eb00fb318e3ad5fef9530e17794d71991ed6b3e56d8ffc46d4e97249471f1193cb82299999bd7e023114",
+"_id": "51f3b249d987e4933f000001",
+"created_at":"2013-07-28T16:48:17.841Z"
+}
+
+home/getMore
+
+{
+"info":"success",
+"dishes":[
+{
+"main_picture":"1",
+"description":"Thit Ga Luoc",
+"body":"Thit Ga Luoc",
+"title":"Thit Ga Luoc",
+"created_by":"51f4d824eb3b39237f000001",
+"_id":"51f54b512bb04e4b7a000019",
+"__v":0,
+"steps":[
+"Thit Ga Luoc",
+"CCCCCCCCCCCxc",
+"cxxxd"
+],
+"categories":[
+"51f54b512bb04e4b7a00001d",
+"51f54b512bb04e4b7a00001e"
+],
+"ingredients":[
+"51f54b512bb04e4b7a00001a",
+"51f54b512bb04e4b7a00001b",
+"51f54b512bb04e4b7a00001c"
+],
+"likes":[
+],
+"picture":[
+"12xxxxx33332333",
+"222xxxxxx22",
+"3xxxxxx3333"
+],
+"comments":[
+],
+"created_at":"2013-07-28T16:48:17.841Z"
+},
+{
+"main_picture":"1",
+"description":"Thit Bo Luoc",
+"body":"Thit Bo Luoc",
+"title":"Thit Bo Luoc",
+"created_by":"51f4d824eb3b39237f000001",
+"_id":"51f54b3e29e80daf1800000d",
+"__v":0,
+"steps":[
+"Thit Bo Luoc",
+"CCCCCCCCCCCxc",
+"cxxxd"
+],
+"categories":[
+"51f54b3e29e80daf18000011",
+"51f54b3e29e80daf18000012"
+],
+"ingredients":[
+"51f54b3e29e80daf1800000e",
+"51f54b3e29e80daf1800000f",
+"51f54b3e29e80daf18000010"
+],
+"likes":[
+],
+"picture":[
+"12xxxxx33332333",
+"222xxxxxx22",
+"3xxxxxx3333"
+],
+"comments":[
+],
+"created_at":"2013-07-28T16:47:58.413Z"
+},
+{
+"main_picture":"1",
+"description":"Thit Heo Luoc",
+"body":"Thit Heo Luoc",
+"title":"Thit Heo Luoc",
+"created_by":"51f4d824eb3b39237f000001",
+"_id":"51f54b0b2bb04e4b7a000013",
+"__v":0,
+"steps":[
+"Thit Heo Luoc",
+"CCCCCCCCCCCxc",
+"cxxxd"
+],
+"categories":[
+"51f54b0b2bb04e4b7a000017",
+"51f54b0b2bb04e4b7a000018"
+],
+"ingredients":[
+"51f54b0b2bb04e4b7a000014",
+"51f54b0b2bb04e4b7a000015",
+"51f54b0b2bb04e4b7a000016"
+],
+"likes":[
+],
+"picture":[
+"12xxxxx33332333",
+"222xxxxxx22",
+"3xxxxxx3333"
+],
+"comments":[
+],
+"created_at":"2013-07-28T16:47:07.583Z"
+}
+]
+}
