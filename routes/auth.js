@@ -213,9 +213,9 @@ exports.register = function (request, response) {
                      * Create TimeLime
                      *
                      * */
-                    account_timelime = new TimeLime();
+                   /* account_timelime = new TimeLime();
                     account_timelime.user_id = account._id
-                    account_timelime.save()
+                    account_timelime.save()*/
                     /*
                      * Create HomeStream
                      * */
@@ -230,7 +230,7 @@ exports.register = function (request, response) {
                         }
                     })
                     response.json({
-                        info: "success"
+                        info: "success", '_id': account._id
                     });
                 }
             });

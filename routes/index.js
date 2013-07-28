@@ -13,6 +13,7 @@ GLOBAL.Comment = mongoose.model('Comment');
 GLOBAL.Ingredient = mongoose.model('Ingredient');
 GLOBAL.Category = mongoose.model('Category');
 GLOBAL.Dishes = mongoose.model('Dishes');
+GLOBAL.HomeStream = mongoose.model('HomeStream');
 GLOBAL.EM = require('../modules/email-dispatcher');
 GLOBAL._ = require('underscore')
 var colors = require('colors');
