@@ -34,6 +34,7 @@ function get_dish(request, response) {
         else {
             if (docs) {
                 docs.populate('created_by', 'name screen_name avatar')
+                    .populate('categories')
                     .populate('ingredients', 'name unit')
                     .populate('comments', function (err, dishes) {
                         Comment.populate(docs, {
