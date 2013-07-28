@@ -45,8 +45,8 @@ require('./email-dispatcher.js');
 app.models = mongoose.models;
 
 // connect to mongodb 
-//var url = app.config.mongodb_url;
-var url = app.config.mongodb_url_app_frog;
+var url = app.config.mongodb_url;
+//var url = app.config.mongodb_url_app_frog;
 mongoose.connect(url);
 
 
