@@ -9,6 +9,7 @@ curl  -H "Content-Type: application/json" -H "Accept: application/json" -X POST 
 info: success~
 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"name":"test_user33","token": "b65644f78f526c430b9de48a710eb220a330ed7c66dacae251625665a370026e436a4d042506bda0cd89f3680cfd425d","email":"chanhvanle@gmail.com","screen_name":"Change Name", "device": "nexus4"}'  http://0.0.0.0:3000/auth/updateinfo
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"name":"test_user33","token": "b65644f78f526c430b9de48a710eb220a330ed7c66dacae251625665a370026e436a4d042506bda0cd89f3680cfd425d","email":"chanhvanle@gmail.com","screen_name":"Change Name", "device": "nexus4"}'  http://0.0.0.0:3000/auth/updateinfo
 
 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X GET -d ' {"name_get":"test_user33", "token": "b65644f78f526c430b9de48a710eb220a330ed7c66dacae251625665a370026e436a4d042506bda0cd89f3680cfd425d", "device": "nexus4"}'  http://0.0.0.0:3000/auth/getinfouser
@@ -55,3 +56,49 @@ http://localhost:3000/auth/getfollowing?callback=jQuery16104670869295950979_1361
 
 
 http://localhost:3000/auth/getinfouser?callback=jQuery16104670869295950979_1361607659796&{"name":"testuser1","name_get":"sepdau","token":"ece20af054339bb52d4feee9a05ab8cc401f8dec6b622b8df1e4c0d1789825bee8dd47f572cdc737a098a5be03044596","device":"xphone"}&_=1361607667778
+
+
+
+
+
+{
+"token":"cc1c25810aad74e63cc7e3ea313d4f93799087d0fb94f77472eb62cc12cb356c53246eea86d9d293b48625f41b4a34ea",
+"device":"nexus4"
+}
+
+
+
+{
+"description":"Rau muong xao toi ot",
+"body":"Body Rau Muong Xao",
+"title":"Rau muong xao",
+"created_by":{
+"name":"user1",
+"screen_name":"User1",
+"_id":"51ea5bb1e81cf2d040000001",
+"avatar":"images/default_profile.png"
+},
+"_id":"51eaaca4263c744457000001",
+"__v":0,
+"steps":[
+],
+"ingredients":[
+],
+"likes":[
+],
+"picture":[
+"1",
+"2",
+"3"
+],
+"comments":[
+],
+"created_at":"2013-07-20T15:28:36.694Z"
+}
+
+
+
+db.dishes.findAndModify( {
+   query: { _id : "51eaaca4263c744457000001" },
+   update: { name: "update name" }
+} );

@@ -2,7 +2,7 @@ exports.upload = function(req, res, next) {
 	console.log(req.body);
 	console.log(req.files);
 	var tmp_path = req.files.source.path;
-	var target_path = __dirname + '/photos/' + req.files.source.name;
+	var target_path = __dirname + '/photos' + tmp_path.slice(4) + req.files.source.name;
 
 	console.log(tmp_path);
 	console.log(target_path);
@@ -13,5 +13,6 @@ exports.upload = function(req, res, next) {
 	var contents = fs.readFileSync(tmp_path);
 	fs.writeFileSync(target_path, contents);
 	fs.unlinkSync(tmp_path);
+    res.json('success', target_path)
 
 }; 

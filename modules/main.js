@@ -29,11 +29,15 @@ GLOBAL.logger = require('tracer').colorConsole({
 GLOBAL.Email = mongoose.SchemaTypes.Email;
 GLOBAL.Url = mongoose.SchemaTypes.Url;
 GLOBAL.ObjectId = Schema.ObjectId;
-
-
+GLOBAL.CommentSchema = require('./comment.js');
+GLOBAL.IngredientSchema = require('./ingredient.js');
+GLOBAL.CategorySchema = require('./categories.js');
+GLOBAL.HomeStreamSchema = require('./home_stream.js');
+GLOBAL._ = require('underscore')
 
 require('./user.js');
 require('./tweet.js');
+require('./dishes.js');
 require('./logintoken.js');
 require('./email-dispatcher.js');
 
@@ -41,7 +45,7 @@ require('./email-dispatcher.js');
 app.models = mongoose.models;
 
 // connect to mongodb 
-// var url = app.config.mongodb_url;
+//var url = app.config.mongodb_url;
 var url = app.config.mongodb_url_app_frog;
 mongoose.connect(url);
 

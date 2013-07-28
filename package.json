@@ -7,12 +7,13 @@
   },
   "dependencies": {
     "express": "3.*",
-    "mongoose": "*",
+    "mongoose": "3.6.15",
     "mongoose-types": "*",
     "ejs": "*",
     "emailjs": "*",
     "imagemagick": "*",
     "tracer": "*",
+    "underscore": "*",
     "colors": "*",
     "stylus": "*"
   },

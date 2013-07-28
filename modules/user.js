@@ -25,6 +25,11 @@ var UserSchema = new Schema({
 			ref: 'User'
 		}
 	],
+    home_stream_id: {
+			type: ObjectId,
+			ref: 'HomeStream'
+		}
+	,
 	followers_count: Number,
 	following_count: Number,
 	isFollow: Boolean

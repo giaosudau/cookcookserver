@@ -9,7 +9,12 @@
 GLOBAL.Accounts = mongoose.model('User');
 GLOBAL.LoginToken = mongoose.model('LoginToken');
 GLOBAL.Tweet = mongoose.model('Tweet');
+GLOBAL.Comment = mongoose.model('Comment');
+GLOBAL.Ingredient = mongoose.model('Ingredient');
+GLOBAL.Category = mongoose.model('Category');
+GLOBAL.Dishes = mongoose.model('Dishes');
 GLOBAL.EM = require('../modules/email-dispatcher');
+GLOBAL._ = require('underscore')
 var colors = require('colors');
 GLOBAL.logger = require('tracer').colorConsole({
 	format: "{{timestamp}} <{{title}}> {{message}} (in {{file}}:{{line}})",
@@ -45,6 +50,18 @@ app.get('/tweet/createcomment', tweet.createComment);
 app.get('/tweet/deletecomment', tweet.deleteComment);
 
 
-var uploads = require('./upload.js');
+var dishes = require('./dishes.js');
+app.post('/dishes/create', dishes.create);
+app.post('/dishes/update', dishes.update);
+app.post('/dishes/delete', dishes.delete);
+app.post('/dishes/get', dishes.get);
+app.post('/dishes/createComment', dishes.createComment);
+app.post('/dishes/deleteComment', dishes.deleteComment);
+app.post('/dishes/createIngredient', dishes.createIngredient);
 
+var home_stream = require('./home_stream.js')
+app.post('/home/get', home_stream.get);
+app.post('/home/getMore', home_stream.getMore);
+
+var uploads = require('./upload.js');
 app.post('/api/photos', uploads.upload);
