@@ -1,24 +1,24 @@
 {
-  "name": "socialcooking",
-  "version": "0.0.1-34",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "3.*",
-    "mongoose": "3.6.15",
-    "mongoose-types": "*",
-    "ejs": "*",
-    "emailjs": "*",
-    "imagemagick": "*",
-    "tracer": "*",
-    "underscore": "*",
-    "colors": "*",
-    "stylus": "*"
-  },
-  "subdomain": "sepdau.serverjs",
-  "engines": {
-    "node": "0.6.x"
-  }
+    "name": "socialcooking",
+    "version": "0.0.1-34",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "3.*",
+        "mongoose": "3.6.15",
+        "mongoose-types": "*",
+        "ejs": "*",
+        "emailjs": "*",
+        "imagemagick": "*",
+        "tracer": "*",
+        "underscore": "*",
+        "colors": "*",
+        "stylus": "*"
+    },
+    "subdomain": "sepdau.serverjs",
+    "engines": {
+        "node": "0.6.x"
+    }
 }
