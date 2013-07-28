@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "socialcooking",
   "version": "0.0.1-34",
   "private": true,
@@ -20,40 +19,6 @@
   },
   "subdomain": "sepdau.serverjs",
   "engines": {
-    "node": "0.8.x"
+    "node": "0.6.x"
   }
-=======
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
-  "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
-  ],
-  "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url":  "http://www.openshift.com/"
-  },
-  "homepage": "http://www.openshift.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://gitub.com/openshift/origin-server"
-  },
-
-  "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
-  },
-
-  "dependencies": {
-  },
-  "devDependencies": {},
-  "bundleDependencies": [],
-
-  "private": true,
-  "main": "server.js"
->>>>>>> 3200fbdd8a7d4ca098c0c3c1017af0751d0fdb81
 }
