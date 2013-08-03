@@ -18,7 +18,8 @@ var DishesSchema = new Schema({
 	title: String,
 	description: String,
 	comments: [{ type: Schema.ObjectId, ref: 'Comment' }],
-	body: String,
+	time_prepare: String,
+    eat_number: Number,
 	picture: [String],
 	main_picture: String,
 	likes: [{
@@ -35,7 +36,8 @@ DishesSchema.statics.create = function(data, callback) {
 	var dish = new this();
 	dish.created_by = data.created_by;
 	dish.title = data.title;
-	dish.body = data.body;
+	dish.time_prepare = data.time_prepare;
+	dish.eat_number = data.eat_number;
     dish.description = data.description
     dish.picture = data.picture
     dish.main_picture = data.main_picture

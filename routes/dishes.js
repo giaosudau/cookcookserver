@@ -184,7 +184,7 @@ exports.update = function (request, response) {
                         doc.save(function (err, product, numberAffected) {
                             if (err)
                                 response.json('err', err);
-                            else{
+                            else {
                                 product.populate('created_by', 'name screen_name avatar')
                                     .populate('ingredients')
                                     .populate('categories')
@@ -383,6 +383,65 @@ exports.createIngredient = function (request, response) {
 
                         })
 
+                })
+
+
+            } else
+                response.json(res);
+        } else {
+            response.json("{error: cant-check-token}")
+        }
+    })
+}
+
+exports.like = function (request, response) {
+    LoginToken.checkTokenIsExpired(request.body.name, request.body.token, request.body.device, function (res) {
+        if (res) {
+            console.log(res);
+            if (res == "success") {
+//
+                Dishes.findById(request.body._id, function (err, docs) {
+                    if (err)
+                        response.json('error', err)
+                    else {
+                        if (docs) {
+                            var indexOfAccountId = docs.likes.indexOf(request.body.account_id);
+                            if (indexOfAccountId >= 0) {
+                                docs.likes.splice(indexOfAccountId, 1)
+                            }
+                            else {
+                                docs.likes.push(request.body.account_id)
+                            }
+
+                            docs.save(function (err, product, numberAffected) {
+                                if (err)
+                                    response.json('err', err);
+                                else {
+                                    product.populate('created_by', 'name screen_name avatar')
+                                        .populate('ingredients')
+                                        .populate('categories')
+                                        .populate('likes', 'name screen_name avatar')
+                                        .populate('categories')
+                                        .populate('comments', function (err, dishes) {
+                                            Comment.populate(product, {
+                                                path: 'comments.created_by',
+                                                select: 'name screen_name avatar',
+                                                model: 'User'
+                                            }, function (err, result) {
+                                                response.json({'info': 'success', 'dishes': result, 'numberAffected': numberAffected})
+                                            });
+
+                                        })
+                                }
+
+                            })
+
+
+                        }
+                        else {
+                            response.json('info', docs)
+                        }
+                    }
                 })
 
 
