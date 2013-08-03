@@ -33,6 +33,7 @@ GLOBAL.CommentSchema = require('./comment.js');
 GLOBAL.IngredientSchema = require('./ingredient.js');
 GLOBAL.CategorySchema = require('./categories.js');
 GLOBAL.HomeStreamSchema = require('./home_stream.js');
+GLOBAL.FavouriteSchema = require('./favourite.js');
 GLOBAL._ = require('underscore')
 
 require('./user.js');

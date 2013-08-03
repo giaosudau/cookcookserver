@@ -408,9 +408,42 @@ exports.like = function (request, response) {
                             var indexOfAccountId = docs.likes.indexOf(request.body.account_id);
                             if (indexOfAccountId >= 0) {
                                 docs.likes.splice(indexOfAccountId, 1)
+                                Favourite.findOne({user_id: request.body.account_id}, function(err, doc){
+                                    if(err) response.json('error', err)
+                                    else {
+                                        logger.info(doc)
+                                        if(doc){
+                                            var indexOfDishId = doc.dishes_ids.indexOf(request.body._id);
+                                            if (indexOfDishId>=0){
+                                                doc.dishes_ids.splice(request.body._id, 1)
+                                                doc.save()
+                                            }
+                                        }
+                                        else{
+                                            Favourite.create(request.body, function(result){
+                                                console.log('create', result)
+                                            })
+                                        }
+                                    }
+                                })
                             }
                             else {
                                 docs.likes.push(request.body.account_id)
+                                Favourite.findOne({user_id: request.body.account_id}, function(err, doc){
+                                    if(err) response.json('error', err)
+                                    else {
+                                        logger.info(doc)
+                                        if(doc){
+                                              doc.dishes_ids.push(request.body._id)
+                                            doc.save()
+                                        }
+                                        else{
+                                            Favourite.create(request.body, function(result){
+                                                console.log('create', result)
+                                            })
+                                        }
+                                    }
+                                })
                             }
 
                             docs.save(function (err, product, numberAffected) {

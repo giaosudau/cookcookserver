@@ -14,6 +14,7 @@ GLOBAL.Ingredient = mongoose.model('Ingredient');
 GLOBAL.Category = mongoose.model('Category');
 GLOBAL.Dishes = mongoose.model('Dishes');
 GLOBAL.HomeStream = mongoose.model('HomeStream');
+GLOBAL.Favourite = mongoose.model('Favourite');
 GLOBAL.EM = require('../modules/email-dispatcher');
 GLOBAL._ = require('underscore')
 var colors = require('colors');
@@ -37,8 +38,8 @@ app.post('/auth/login', auth.login);
 app.post('/auth/autologin', auth.autoLogin);
 app.post('/auth/register', auth.register);
 app.post('/auth/updateinfo', auth.updateAccount);
-app.get('/auth/lostpassword', auth.lostPassword);
-app.get('/auth/resetpassword', auth.resetPassword);
+app.post('/auth/lostpassword', auth.lostPassword);
+app.post('/auth/resetpassword', auth.resetPassword);
 //
 app.get('/auth/createfollowing', auth.createFollowing);
 app.get('/auth/getfollowing', auth.getFollowing);
@@ -71,3 +72,7 @@ app.post('/api/photos', uploads.upload);
 var search = require('./search.js');
 app.post('/searchUser', search.searchUser);
 app.post('/searchDishes', search.searchDishes);
+
+
+var favourite = require('./favourite.js')
+app.post('/favourite/get', favourite.get)

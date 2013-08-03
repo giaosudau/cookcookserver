@@ -210,6 +210,21 @@ exports.register = function (request, response) {
                     account.save();
                     logger.info('create user success');
                     /*
+                    *
+                    * */
+
+                    account_favourite = new Favourite()
+                    account_favourite.user_id = account._id
+                    account_favourite.save(function (err, result, numberAffected) {
+                        if (err)
+                            response.json('err', err);
+                        else {
+                            account.favourite_id = result._id
+                            account.save()
+                        }
+                    })
+
+                    /*
                      * Create TimeLime
                      *
                      * */
