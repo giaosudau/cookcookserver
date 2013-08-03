@@ -383,3 +383,204 @@ home/getMore
 }
 ]
 }
+
+
+5. Search User
+{"name":"test_user1", "device":"nexus4",
+ "token":"869a9cd28e44eb00fb318e3ad5fef9530e17794d71991ed6b3e56d8ffc46d4e97249471f1193cb82299999bd7e023114",
+ "search_string": "test"
+}
+
+http://localhost:3000/searchUser
+
+[
+    {
+        "__v": 0,
+        "_id": "51f4d7efd86d9bad16000001",
+        "about": "Sexy Free and Single",
+        "email": "test_user@gmail.com",
+        "followers_count": 0,
+        "following_count": 0,
+        "hashedPass": "0a2733ec5c54e936c719714efc4f3ab76be115c0",
+        "home_stream_id": "51f4d7efd86d9bad16000002",
+        "location": "Quang Tri",
+        "name": "test_user",
+        "salt": "1217147123096",
+        "screen_name": "Test User",
+        "statuses_count": 0,
+        "following": [],
+        "followers": [],
+        "avatar": "images/default_profile.png",
+        "created_at": "2013-07-28T08:35:59.156Z"
+    },
+    {
+        "__v": 0,
+        "_id": "51f4d824eb3b39237f000001",
+        "about": "Sexy Free and Single",
+        "email": "test_user1@gmail.com",
+        "followers_count": 0,
+        "following_count": 0,
+        "hashedPass": "e6cdab6cc36f0a1b70f9eca74b51bb6aea6535f7",
+        "home_stream_id": "51f4d824eb3b39237f000002",
+        "location": "Quang Tri",
+        "name": "test_user1",
+        "salt": "326143476256",
+        "screen_name": "Test User1",
+        "statuses_count": 0,
+        "following": [],
+        "followers": [],
+        "avatar": "images/default_profile.png",
+        "created_at": "2013-07-28T08:36:52.711Z"
+    }
+]
+
+
+
+
+
+
+6. Search Dishes
+ {"name":"test_user1", "device":"nexus4",
+  "token":"869a9cd28e44eb00fb318e3ad5fef9530e17794d71991ed6b3e56d8ffc46d4e97249471f1193cb82299999bd7e023114",
+  "search_string": "Chuot",
+  "option_steps": "1",
+  "option_ingredients": "1"
+ }
+
+ http://localhost:3000/searchDishes
+
+ {
+     "info": "success",
+     "dishes": [
+         {
+             "main_picture": "1",
+             "description": "Rat hap dan",
+             "body": "Chuot Quay Nguyen Con Mat Ong",
+             "title": "Chuot Quay",
+             "created_by": {
+                 "_id": "51f4d824eb3b39237f000001",
+                 "name": "test_user1",
+                 "screen_name": "Test User1",
+                 "avatar": "images/default_profile.png"
+             },
+             "_id": "51f54a7d2bb04e4b7a000007",
+             "__v": 0,
+             "steps": [
+                 "thit chuot rua sach",
+                 "bxxxxc",
+                 "cxxxd"
+             ],
+             "categories": [
+                 {
+                     "name": "Mon Chuot",
+                     "_id": "51f54a7d2bb04e4b7a00000b",
+                     "__v": 0
+                 },
+                 {
+                     "name": "Mon Nuong",
+                     "_id": "51f54a7d2bb04e4b7a00000c",
+                     "__v": 0
+                 }
+             ],
+             "ingredients": [
+                 {
+                     "unit": "500g",
+                     "name": "Chuot",
+                     "created_by": "51f4d824eb3b39237f000001",
+                     "_id": "51f54a7d2bb04e4b7a000008",
+                     "__v": 0,
+                     "created_at": "2013-07-28T16:44:45.460Z"
+                 },
+                 {
+                     "unit": "300g",
+                     "name": "Mat Ong",
+                     "created_by": "51f4d824eb3b39237f000001",
+                     "_id": "51f54a7d2bb04e4b7a000009",
+                     "__v": 0,
+                     "created_at": "2013-07-28T16:44:45.461Z"
+                 },
+                 {
+                     "unit": "100g",
+                     "name": "Rau Thom",
+                     "created_by": "51f4d824eb3b39237f000001",
+                     "_id": "51f54a7d2bb04e4b7a00000a",
+                     "__v": 0,
+                     "created_at": "2013-07-28T16:44:45.462Z"
+                 }
+             ],
+             "likes": [],
+             "picture": [
+                 "12xxxxx33332333",
+                 "222xxxxxx22",
+                 "3xxxxxx3333"
+             ],
+             "comments": [],
+             "created_at": "2013-07-28T16:44:45.459Z"
+         },
+         {
+             "main_picture": "1",
+             "description": "Thit Chuot Luoc",
+             "body": "Thit Chuot Luoc",
+             "title": "Thit Chuot Luoc",
+             "created_by": {
+                 "_id": "51f4d824eb3b39237f000001",
+                 "name": "test_user1",
+                 "screen_name": "Test User1",
+                 "avatar": "images/default_profile.png"
+             },
+             "_id": "51f54b6f2bb04e4b7a00001f",
+             "__v": 0,
+             "steps": [
+                 "Thit Chuot Luoc",
+                 "CCCCCCCCCCCxc",
+                 "cxxxd"
+             ],
+             "categories": [
+                 {
+                     "name": "Mon Chuot",
+                     "_id": "51f54b6f2bb04e4b7a000023",
+                     "__v": 0
+                 },
+                 {
+                     "name": "Mon Nuong",
+                     "_id": "51f54b6f2bb04e4b7a000024",
+                     "__v": 0
+                 }
+             ],
+             "ingredients": [
+                 {
+                     "unit": "500g",
+                     "name": "Chuot",
+                     "created_by": "51f4d824eb3b39237f000001",
+                     "_id": "51f54b6f2bb04e4b7a000020",
+                     "__v": 0,
+                     "created_at": "2013-07-28T16:48:47.678Z"
+                 },
+                 {
+                     "unit": "300g",
+                     "name": "Mat Ong",
+                     "created_by": "51f4d824eb3b39237f000001",
+                     "_id": "51f54b6f2bb04e4b7a000021",
+                     "__v": 0,
+                     "created_at": "2013-07-28T16:48:47.679Z"
+                 },
+                 {
+                     "unit": "100g",
+                     "name": "Rau Thom",
+                     "created_by": "51f4d824eb3b39237f000001",
+                     "_id": "51f54b6f2bb04e4b7a000022",
+                     "__v": 0,
+                     "created_at": "2013-07-28T16:48:47.680Z"
+                 }
+             ],
+             "likes": [],
+             "picture": [
+                 "12xxxxx33332333",
+                 "222xxxxxx22",
+                 "3xxxxxx3333"
+             ],
+             "comments": [],
+             "created_at": "2013-07-28T16:48:47.677Z"
+         }
+     ]
+ }

@@ -66,3 +66,7 @@ app.post('/home/getMore', home_stream.getMore);
 
 var uploads = require('./upload.js');
 app.post('/api/photos', uploads.upload);
+
+var search = require('./search.js');
+app.post('/searchUser', search.searchUser);
+app.post('/searchDishes', search.searchDishes);

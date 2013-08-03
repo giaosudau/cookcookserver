@@ -1,18 +1,28 @@
-exports.upload = function(req, res, next) {
-	console.log(req.body);
-	console.log(req.files);
-	var tmp_path = req.files.source.path;
-	var target_path = __dirname + '/photos' + tmp_path.slice(4) + req.files.source.name;
+exports.upload = function (req, res, next) {
 
-	console.log(tmp_path);
-	console.log(target_path);
-	var fs = require('fs');
-	/*
-		cross-device link not permitted.
-	*/
-	var contents = fs.readFileSync(tmp_path);
-	fs.writeFileSync(target_path, contents);
-	fs.unlinkSync(tmp_path);
-    res.json('success', target_path)
+    LoginToken.checkTokenIsExpired(req.body.name, req.body.token, req.body.device, function (info) {
+        console.log("Check Token: ", info);
+        if (info == "success") {
+            console.log(req.body);
+            console.log(req.files);
+            var tmp_path = req.files.source.path;
+            var target_path = __dirname + '/photos' + tmp_path.slice(4) + req.files.source.name;
 
-}; 
+            console.log(tmp_path);
+            console.log(target_path);
+            var fs = require('fs');
+            /*
+             cross-device link not permitted.
+             */
+            var contents = fs.readFileSync(tmp_path);
+            fs.writeFileSync(target_path, contents);
+            fs.unlinkSync(tmp_path);
+            res.json('success', target_path)
+        } else {
+            console.log(info);
+            res.json(info);
+        }
+    });
+
+
+};
