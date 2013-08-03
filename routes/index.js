@@ -43,7 +43,7 @@ app.get('/auth/resetpassword', auth.resetPassword);
 app.get('/auth/createfollowing', auth.createFollowing);
 app.get('/auth/getfollowing', auth.getFollowing);
 app.get('/auth/getfollowers', auth.getFollowers);
-app.get('/auth/getinfouser', auth.getInfoUser);
+app.post('/auth/getinfouser', auth.getInfoUser);
 
 var tweet = require('./tweet.js');
 app.get('/tweet/create', tweet.createTweet);
