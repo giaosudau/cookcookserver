@@ -1,12 +1,12 @@
 exports.upload = function (req, res, next) {
-
+    console.log(JSON.stringify(req))
     LoginToken.checkTokenIsExpired(req.body.name, req.body.token, req.body.device, function (info) {
         console.log("Check Token: ", info);
         if (info == "success") {
             console.log(req.body);
             console.log(req.files);
-            var tmp_path = req.files.source.path;
-            var target_path = __dirname + '/photos' + tmp_path.slice(4) + req.files.source.name;
+            var tmp_path = req.files.path;
+            var target_path = __dirname + '/photos' + tmp_path.substring(tmp_path.length-15, tmp_path.length) + req.files.name;
 
             console.log(tmp_path);
             console.log(target_path);

@@ -3,10 +3,10 @@ var UserSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	name: String,
+	name: {type: String, required: true, unique: true },
 	hashedPass: String,
 	salt: String,
-	email: Email,
+	email: { type: Email, required: true, unique: true },
 	avatar: {
 		type: String,
 		default: "images/default_profile.png"

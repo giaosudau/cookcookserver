@@ -7,8 +7,12 @@
  */
 
 CategorySchema = new Schema({
-    name: String,
-    parent_id: { type: Schema.ObjectId, ref: 'Category' }
+    name: {type: String, required: true, unique: true },
+    parent_id: { type: Schema.ObjectId, ref: 'Category' },
+    picture: {
+        type: String,
+        default: "images/default_category.png"
+    }
 })
 
 mongoose.model('Category', CategorySchema);

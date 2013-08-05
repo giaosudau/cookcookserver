@@ -76,3 +76,9 @@ app.post('/searchDishes', search.searchDishes);
 
 var favourite = require('./favourite.js')
 app.post('/favourite/get', favourite.get)
+
+var category = require('./categories.js')
+app.post('/category/getAll', category.getAll)
+app.post('/category/getChild', category.getChild)
+app.post('/category/getChildPopulate', category.getChildPopulate)
+
