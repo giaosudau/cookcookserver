@@ -644,3 +644,65 @@ http://localhost:3000/searchUser
      },
      "numberAffected": 1
  }
+
+
+ my receipt
+ {"name":"test_user1", "device":"nexus4",
+  "token":"869a9cd28e44eb00fb318e3ad5fef9530e17794d71991ed6b3e56d8ffc46d4e97249471f1193cb82299999bd7e023114",
+  "account_id": "51f4d824eb3b39237f000001"
+ }
+
+ http://localhost:3000/dishes/myreceipt
+
+ [
+     {
+         "main_picture": "1",
+         "title": "Ga Quay",
+         "_id": "51f54a2329e80daf18000001"
+     },
+     {
+         "main_picture": "1",
+         "title": "Vit Quay",
+         "_id": "51f54a4c2bb04e4b7a000001"
+     },
+     {
+         "main_picture": "1",
+         "title": "Chuot Quay",
+         "_id": "51f54a7d2bb04e4b7a000007"
+     },
+     {
+         "main_picture": "1",
+         "title": "Bo Quay",
+         "_id": "51f54a9a2bb04e4b7a00000d"
+     },
+     {
+         "main_picture": "1",
+         "title": "Heo Quay",
+         "_id": "51f54ac329e80daf18000007"
+     },
+     {
+         "main_picture": "1",
+         "title": "Thit Heo Luoc",
+         "_id": "51f54b0b2bb04e4b7a000013"
+     },
+     {
+         "main_picture": "1",
+         "title": "Thit Bo Luoc",
+         "_id": "51f54b3e29e80daf1800000d"
+     },
+     {
+         "main_picture": "1",
+         "title": "Thit Ga Luoc",
+         "_id": "51f54b512bb04e4b7a000019"
+     },
+     {
+         "main_picture": "1",
+         "title": "Thit Chuot Luoc",
+         "_id": "51f54b6f2bb04e4b7a00001f"
+     },
+     {
+         "_id": "51f4da09eb3b39237f000004",
+         "main_picture": "aaaaaaxxxxxxxxxxxx",
+         "title": "Update -----------------"
+     }
+ ]
