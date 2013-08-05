@@ -485,3 +485,26 @@ exports.like = function (request, response) {
         }
     })
 }
+
+exports.myreceipt = function (request, response) {
+    LoginToken.checkTokenIsExpired(request.body.name, request.body.token, request.body.device, function (res) {
+        if (res) {
+            console.log(res);
+            if (res == "success") {
+                Dishes.find({
+                    created_by: request.body.account_id
+                }, '_id title main_picture', function(err, docs){
+                     logger.info(docs)
+                     if(err) response.json('error', err)
+                     else{
+                         response.json('info', docs)
+                     }
+                })
+
+            } else
+                response.json(res);
+        } else {
+            response.json("{error: cant-check-token}")
+        }
+    })
+}
