@@ -279,7 +279,8 @@ exports.login = function (request, response) {
                             })
                             response.json({
                                 token: res,
-                                device: request.body.device
+                                device: request.body.device,
+                                account_id: docs._id
                             });
                         } else {
                             logger.error('cant-create-token');
