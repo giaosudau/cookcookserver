@@ -497,7 +497,7 @@ exports.myreceipt = function (request, response) {
                      logger.info(docs)
                      if(err) response.json('error', err)
                      else{
-                         response.json('info', docs)
+                         response.json({'data': docs})
                      }
                 })
 
