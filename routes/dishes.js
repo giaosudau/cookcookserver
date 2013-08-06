@@ -508,3 +508,43 @@ exports.myreceipt = function (request, response) {
         }
     })
 }
+
+exports.deleteMyDish = function (request, response) {
+    LoginToken.checkTokenIsExpired(request.body.name, request.body.token, request.body.device, function (res) {
+        if (res) {
+            console.log(res);
+            if (res == "success") {
+//
+                 Dishes.findOneAndRemove({
+                     created_by: request.body.account_id,
+                     _id: request.body._id
+                 }, function(err, result){
+                     if (err) response.json('error', err)
+                     else{
+                         logger.info(result)
+                         if(result)
+                             response.json({'info': 'success'})
+                         else{
+                             response.json({'error': 'not-found-dish'})
+                         }
+                     }
+                 })
+//                 Dishes.findByIdAndRemove(request.body._id, function(err, result){
+//                     if (err) response.json('error', err)
+//                     else{
+//                         logger.info(result)
+//                         if(result)
+//                         response.json({'info': 'success'})
+//                         else{
+//                             response.json({'error': 'not-found-dish'})
+//                         }
+//                     }
+//                 })
+
+            } else
+                response.json(res);
+        } else {
+            response.json("{error: cant-check-token}")
+        }
+    })
+}

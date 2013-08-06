@@ -62,6 +62,7 @@ app.post('/dishes/deleteComment', dishes.deleteComment);
 app.post('/dishes/createIngredient', dishes.createIngredient);
 app.post('/dishes/like', dishes.like);
 app.post('/dishes/myreceipt', dishes.myreceipt);
+app.post('/dishes/deletemyreceipt', dishes.deleteMyDish);
 
 var home_stream = require('./home_stream.js')
 app.post('/home/get', home_stream.get);
