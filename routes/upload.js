@@ -4,9 +4,10 @@ exports.upload = function (req, res, next) {
         console.log("Check Token: ", info);
         if (info == "success") {
             console.log(req.body);
-            console.log(req.files);
-            var tmp_path = req.files.path;
-            var target_path = __dirname + '/photos' + tmp_path.substring(tmp_path.length-15, tmp_path.length) + req.files.name;
+            console.log(req.files.files);
+            var tmp_path = req.files.files.path;
+            var target_path = '../public/photos/' + tmp_path.substring(tmp_path.length-15, tmp_path.length) + req.files.files.name;
+            var return_path = '/photos/' + tmp_path.substring(tmp_path.length-15, tmp_path.length) + req.files.files.name;
 
             console.log(tmp_path);
             console.log(target_path);
@@ -17,7 +18,7 @@ exports.upload = function (req, res, next) {
             var contents = fs.readFileSync(tmp_path);
             fs.writeFileSync(target_path, contents);
             fs.unlinkSync(tmp_path);
-            res.json('success', target_path)
+            res.json('success', return_path)
         } else {
             console.log(info);
             res.json(info);
