@@ -1,6 +1,5 @@
 var path = require('path')
 exports.upload = function (req, res, next) {
-   // console.log(JSON.stringify(req))
     LoginToken.checkTokenIsExpired(req.body.name, req.body.token, req.body.device, function (info) {
         console.log("Check Token: ", info);
         if (info == "success") {
@@ -39,13 +38,6 @@ exports.upload = function (req, res, next) {
                 });
             });
 
-
-//            var contents = fs.readFileSync(tmp_path);
-//            logger.info(contents)
-//            fs.writeFileSync(target_path, contents);
-//            fs.unlinkSync(tmp_path);
-//			res.json({'success': return_path});
-//            logger.info(res)
         } else {
             logger.error(info)
             res.json(info);

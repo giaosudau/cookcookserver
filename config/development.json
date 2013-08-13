@@ -1,6 +1,8 @@
-    {
-  "mongodb_url": "mongodb://127.0.0.1/dicho",
-  "mongodb_url_app_frog": "mongodb://sepdau:qwertyuiop@dharma.mongohq.com:10084/dicho2_giaosudau",
-  "logger": { "format": "dev" }
+{
+    "mongodb_url": "mongodb://127.0.0.1/dicho",
+    "mongodb_url_app_frog": "mongodb://sepdau:qwertyuiop@dharma.mongohq.com:10084/dicho2_giaosudau",
+    "logger": {
+        "format": "dev"
+    }
 }
 
